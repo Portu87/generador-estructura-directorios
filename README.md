@@ -35,7 +35,7 @@ Este script copiará `generar_arbol.py` al directorio `/usr/local/bin`,
    nano ~/.bahsrc
    ```
 
-7. Al final del archivo copia la siguiente función:
+7. Al final del archivo pega la siguiente función, luego de pegar la funion guarda con `ctrl+o` y luego `ctrl+x`para salir:
     ```bash
     # Funcion para generar arbol de directorios
     function generar_arbol() {
