@@ -25,7 +25,7 @@ Para instalar y utilizar el script `generar_arbol.py`, sigue estos pasos:
 5. Ejecuta el archivo `install.sh` para instalar el script y configurar la función `generar_arbol`:
 
     ```bash
-    ./install.sh
+    sudo ./install.sh
     ```
 
 Este script copiará `generar_arbol.py` al directorio `/usr/local/bin`,
@@ -49,6 +49,13 @@ Este script copiará `generar_arbol.py` al directorio `/usr/local/bin`,
     ```
 Si por alguna razón los cambios no surten efecto, puedes reiniciar la terminal.
 
+### Desinstalar
+1. Abre una terminal y navega hasta el directorio donde se extrajo el archivo zip.
+
+2. Ejecuta el comando:
+    ```bash
+    sudo ./uninstall.sh
+    ```
 ### Ejemplo de Ejecución
 
 Para generar un árbol de directorios y archivos del directorio `/home/sebas/Dev/www/gesapp` con las carpetas a excluir normalmente en una app de NextJs (`constants/log,server,node_modules,.next,.git,objects,types`), sigue estos pasos:
@@ -89,7 +96,7 @@ Para generar un árbol de directorios y archivos del directorio `/home/sebas/Dev
     Se ha generado el árbol de directorios en el archivo: ejemplo.txt
     ```
 
-7. Ahora puedes ver tu archivo creado en la carpeta principal `generador-de-estructuras` que has descomprimido anteriormente.
+7. Abre una terminal y navega hasta el directorio donde se extrajo el archivo zip. Ahora puedes ver tu archivo creado en la carpeta principal `generador-de-estructuras` que has descomprimido anteriormente.
 
 Este es un ejemplo de cómo sería la ejecución del script `generar_arbol.py` en la consola, paso a paso, con todas las interacciones y solicitudes de información.
 
