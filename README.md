@@ -1,4 +1,4 @@
-#Generador de Árbol de Directorios
+# Generador de Árbol de Directorios
 
 El script `generar_arbol.py` es una herramienta de línea de comandos diseñada para crear una representación visual en forma de árbol de la estructura de directorios de un proyecto. Esta representación se guarda en un archivo de texto, facilitando la visualización y el análisis de la estructura de carpetas y archivos de un proyecto.
 
@@ -35,7 +35,7 @@ Este script copiará `generar_arbol.py` al directorio `/usr/local/bin`,
    nano ~/.bahsrc
    ```
 
-7. Al final del archivo copia la siguiente función:
+7. Al final del archivo pega la siguiente función, luego de pegar la funion guarda con `ctrl+o` y luego `ctrl+x`para salir:
     ```bash
     # Funcion para generar arbol de directorios
     function generar_arbol() {
@@ -88,7 +88,6 @@ Para generar un árbol de directorios y archivos del directorio `/home/sebas/Dev
     ```bash
     Se ha generado el árbol de directorios en el archivo: ejemplo.txt
     ```
-
 Este es un ejemplo de cómo sería la ejecución del script `generar_arbol.py` en la consola, paso a paso, con todas las interacciones y solicitudes de información.
 
 
