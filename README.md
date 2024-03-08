@@ -10,7 +10,7 @@ El script está escrito en Python 3, asegurándose de que sea compatible con la 
 
 Para instalar y utilizar el script `generar_arbol.py`, sigue estos pasos:
 
-1. Descarga el archivo zip del generador de estructuras desde [aquí](#).
+1. Descarga el archivo zip del generador de estructuras desde [AQUÍ](https://github.com/Portu87/generador-estructura-directorios/archive/refs/heads/main.zip).
 
 2. Descomprime el archivo zip en el directorio de tu elección.
 
