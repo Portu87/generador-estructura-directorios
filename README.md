@@ -88,6 +88,9 @@ Para generar un árbol de directorios y archivos del directorio `/home/sebas/Dev
     ```bash
     Se ha generado el árbol de directorios en el archivo: ejemplo.txt
     ```
+
+7. Ahora puedes ver tu archivo creado en la carpeta principal `generador-de-estructuras` que has descomprimido anteriormente.
+
 Este es un ejemplo de cómo sería la ejecución del script `generar_arbol.py` en la consola, paso a paso, con todas las interacciones y solicitudes de información.
 
 
