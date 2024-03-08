@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#Generador de Árbol de Directorios
 
-## Getting Started
+El script `generar_arbol.py` es una herramienta de línea de comandos diseñada para crear una representación visual en forma de árbol de la estructura de directorios de un proyecto. Esta representación se guarda en un archivo de texto, facilitando la visualización y el análisis de la estructura de carpetas y archivos de un proyecto.
 
-First, run the development server:
+### Tecnología y Versión
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+El script está escrito en Python 3, asegurándose de que sea compatible con la mayoría de las versiones recientes de Python. Se recomienda usar Python 3.6 o superior para garantizar la compatibilidad completa con las características del lenguaje utilizadas en el script.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Instalación
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Para instalar y utilizar el script `generar_arbol.py`, sigue estos pasos:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Descarga el archivo zip del generador de estructuras desde [aquí](#).
 
-## Learn More
+2. Descomprime el archivo zip en el directorio de tu elección.
 
-To learn more about Next.js, take a look at the following resources:
+3. Abre una terminal y navega hasta el directorio donde se extrajo el archivo zip.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Asegúrate de que el archivo `install.sh` tenga permisos de ejecución. Si no los tiene, puedes concederlos con el siguiente comando:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    ```bash
+    chmod +x install.sh
+    ```
 
-## Deploy on Vercel
+5. Ejecuta el archivo `install.sh` para instalar el script y configurar la función `generar_arbol`:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    ./install.sh
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Este script copiará `generar_arbol.py` al directorio `/usr/local/bin`,
+
+6. Abre el archivo ~/.bashrc, para agregar un nuevo comando:
+   ```bash
+   nano ~/.bahsrc
+   ```
+
+7. Al final del archivo copia la siguiente función:
+    ```bash
+    # Funcion para generar arbol de directorios
+    function generar_arbol() {
+        python3 /usr/local/bin/generar_arbol.py "$@"
+    }
+    ```
+
+8. Para hacer que los cambios surtan efecto en la sesión actual de la terminal,ejecuta el comando 
+    ```bash
+    source ~/.bashrc
+    ```
+Si por alguna razón los cambios no surten efecto, puedes reiniciar la terminal.
+
+### Ejemplo de Ejecución
+
+Para generar un árbol de directorios y archivos del directorio `/home/sebas/Dev/www/gesapp` con las carpetas a excluir normalmente en una app de NextJs (`constants/log,server,node_modules,.next,.git,objects,types`), sigue estos pasos:
+
+1. Ejecuta el script `generar_arbol`:
+
+    ```bash
+    generar_arbol
+    ```
+
+2. El script solicitará la ruta del directorio que deseas analizar. Ingresa la ruta y presiona Enter:
+
+    ```bash
+    Introduce la ruta del directorio a analizar: /tu/ruta/de/directorio
+    ```
+
+3. A continuación, se te pedirá que ingreses el nombre del archivo de salida (incluyendo la extensión `.txt`). Ingresa el nombre y presiona Enter:
+
+    ```bash
+    Introduce el nombre del archivo de salida (con extensión .txt): ejemplo.txt
+    ```
+
+4. Luego, si deseas excluir ciertos directorios del análisis, puedes proporcionar una lista separada por comas de los nombres de los directorios a excluir. De lo contrario, simplemente presiona Enter para continuar sin excluir ningún directorio:
+
+    ```bash
+    Opcional: Introduce los nombres de los directorios a excluir, separados por coma (sin espacios): directorio1,directorio2,directorio3
+    ```
+
+5. Finalmente, si hay extensiones de archivo que deseas excluir del análisis, puedes proporcionar una lista separada por comas de las extensiones a excluir. De lo contrario, presiona Enter para continuar sin excluir ninguna extensión:
+
+    ```bash
+    Opcional: Introduce las extensiones de archivo a excluir, separadas por coma (sin espacios): jpg,png
+    ```
+
+6. Una vez que hayas proporcionado todas las opciones necesarias, el script generará el árbol de directorios y guardará la salida en el archivo especificado. Verás un mensaje que indica que se ha generado el árbol de directorios correctamente:
+
+    ```bash
+    Se ha generado el árbol de directorios en el archivo: ejemplo.txt
+    ```
+
+Este es un ejemplo de cómo sería la ejecución del script `generar_arbol.py` en la consola, paso a paso, con todas las interacciones y solicitudes de información.
+
+
+
+
+
+
+
+
+
