@@ -1,4 +1,4 @@
-#Generador de Árbol de Directorios
+# Generador de Árbol de Directorios
 
 El script `generar_arbol.py` es una herramienta de línea de comandos diseñada para crear una representación visual en forma de árbol de la estructura de directorios de un proyecto. Esta representación se guarda en un archivo de texto, facilitando la visualización y el análisis de la estructura de carpetas y archivos de un proyecto.
 
